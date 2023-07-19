@@ -1,0 +1,49 @@
+{
+  "required" : [ "id" ],
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "Unique-Identifier for this attachment"
+    },
+    "href" : {
+      "type" : "string",
+      "description" : "URL serving as reference for the attachment resource"
+    },
+    "description" : {
+      "type" : "string",
+      "description" : "A narrative text describing the content of the attachment"
+    },
+    "name" : {
+      "type" : "string",
+      "description" : "Name of the related entity."
+    },
+    "url" : {
+      "type" : "string",
+      "description" : "Link to the attachment media/content"
+    },
+    "atReferredType" : {
+      "type" : "string",
+      "description" : "The actual type of the target instance when needed for disambiguation."
+    },
+    "atSchemaLocation" : {
+      "type" : "string",
+      "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+      "format" : "uri"
+    },
+    "atBaseType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the super-class"
+    },
+    "tmForumType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the sub-class entity name"
+    }
+  },
+  "description" : "Attachment reference. An attachment complements the description of an element (for instance a product) through video, pictures",
+  "$schemaVersion" : "4.0.0",
+  "title" : "AttachmentRef",
+  "$id" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/AttachmentRef/schema.json",
+  "modelTags" : "",
+  "$schema" : "http://json-schema.org/schema#"
+}

@@ -1,0 +1,92 @@
+{
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "Unique identifier for this particular attachment"
+    },
+    "href" : {
+      "type" : "string",
+      "description" : "URI for this Attachment"
+    },
+    "attachmentType" : {
+      "type" : "string",
+      "description" : "Attachment type such as video, picture"
+    },
+    "content" : {
+      "type" : "string",
+      "description" : "The actual contents of the attachment object, if embedded, encoded as base64"
+    },
+    "description" : {
+      "type" : "string",
+      "description" : "A narrative text describing the content of the attachment"
+    },
+    "mimeType" : {
+      "type" : "string",
+      "description" : "Attachment mime type such as extension file for video, picture and document"
+    },
+    "name" : {
+      "type" : "string",
+      "description" : "The name of the attachment"
+    },
+    "url" : {
+      "type" : "string",
+      "description" : "Uniform Resource Locator, is a web page address (a subset of URI)"
+    },
+    "size" : {
+      "properties" : {
+        "type" : "object",
+        "properties" : {
+          "amount" : {
+            "type" : "number",
+            "description" : "Numeric value in a given unit",
+            "format" : "float",
+            "default" : 1.0
+          },
+          "units" : {
+            "type" : "string",
+            "description" : "Unit"
+          }
+        },
+        "description" : "An amount in a given unit"
+      }
+    },
+    "validFor" : {
+      "properties" : {
+        "type" : "object",
+        "properties" : {
+          "endDateTime" : {
+            "type" : "string",
+            "description" : "End of the time period, using IETC-RFC-3339 format",
+            "format" : "date-time"
+          },
+          "startDateTime" : {
+            "type" : "string",
+            "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+            "format" : "date-time"
+          }
+        },
+        "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+      }
+    },
+    "atSchemaLocation" : {
+      "type" : "string",
+      "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+      "format" : "uri"
+    },
+    "atBaseType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the super-class"
+    },
+    "tmForumType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the sub-class entity name"
+    }
+  },
+  "description" : "Complements the description of an element (for instance a product) through video, pictures...",
+  "$schemaVersion" : "4.0.0",
+  "title" : "Attachment",
+  "$id" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/Attachment/schema.json",
+  "modelTags" : "",
+  "$schema" : "http://json-schema.org/schema#"
+}

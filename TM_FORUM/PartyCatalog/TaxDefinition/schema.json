@@ -1,0 +1,40 @@
+{
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "Unique identifier of the tax."
+    },
+    "name" : {
+      "type" : "string",
+      "description" : "Tax name."
+    },
+    "taxType" : {
+      "type" : "string",
+      "description" : "Type of  the tax."
+    },
+    "atReferredType" : {
+      "type" : "string",
+      "description" : "The actual type of the target instance when needed for disambiguation."
+    },
+    "atSchemaLocation" : {
+      "type" : "string",
+      "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+      "format" : "uri"
+    },
+    "atBaseType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the super-class"
+    },
+    "tmForumType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the sub-class entity name"
+    }
+  },
+  "description" : "Reference of a tax definition. A tax is levied by an authorized tax jurisdiction. There are many different types of tax (Federal Tax levied by the US Government, State Tax levied by the State of California,…).",
+  "$schemaVersion" : "4.0.0",
+  "title" : "TaxDefinition",
+  "$id" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/TaxDefinition/schema.json",
+  "modelTags" : "",
+  "$schema" : "http://json-schema.org/schema#"
+}

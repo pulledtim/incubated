@@ -1,0 +1,55 @@
+{
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "Unique identifier of the certificate of the tax exemption"
+    },
+    "attachment" : {
+      "$ref" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/AttachmentRefOrValue/schema.json"
+    },
+    "taxDefinition" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/TaxDefinition/schema.json"
+      }
+    },
+    "validFor" : {
+      "properties" : {
+        "type" : "object",
+        "properties" : {
+          "endDateTime" : {
+            "type" : "string",
+            "description" : "End of the time period, using IETC-RFC-3339 format",
+            "format" : "date-time"
+          },
+          "startDateTime" : {
+            "type" : "string",
+            "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+            "format" : "date-time"
+          }
+        },
+        "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+      }
+    },
+    "atSchemaLocation" : {
+      "type" : "string",
+      "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+      "format" : "uri"
+    },
+    "atBaseType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the super-class"
+    },
+    "tmForumType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the sub-class entity name"
+    }
+  },
+  "description" : "A tax exemption certificate represents a tax exemption granted to a party (individual or organization) by a tax jurisdiction which may be a city, state, country,... An exemption has a certificate identifier (received from the jurisdiction that levied the tax) and a validity period. An exemption is per tax types and determines for each type of tax what portion of the tax is exempted (partial by percentage or complete) via the tax definition.",
+  "$schemaVersion" : "4.0.0",
+  "title" : "TaxExemptionCertificate",
+  "$id" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/TaxExemptionCertificate/schema.json",
+  "modelTags" : "",
+  "$schema" : "http://json-schema.org/schema#"
+}

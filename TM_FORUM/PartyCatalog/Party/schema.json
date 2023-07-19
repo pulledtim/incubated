@@ -1,0 +1,285 @@
+{
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "Unique identifier of the organization"
+    },
+    "href" : {
+      "type" : "string",
+      "description" : "Hyperlink to access the organization"
+    },
+    "contactMedium" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "mediumType" : {
+              "type" : "string",
+              "description" : "Type of the contact medium, such as: email address, telephone number, postal address"
+            },
+            "preferred" : {
+              "type" : "boolean",
+              "description" : "If true, indicates that is the preferred contact medium"
+            },
+            "characteristic" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "city" : {
+                    "type" : "string",
+                    "description" : "The city"
+                  },
+                  "contactType" : {
+                    "type" : "string",
+                    "description" : "The type of contact, for example: phone number such as mobile, fixed home, fixed office. postal address such as shipping instalation…"
+                  },
+                  "country" : {
+                    "type" : "string",
+                    "description" : "The country"
+                  },
+                  "emailAddress" : {
+                    "type" : "string",
+                    "description" : "Full email address in standard format"
+                  },
+                  "faxNumber" : {
+                    "type" : "string",
+                    "description" : "The fax number of the contact"
+                  },
+                  "phoneNumber" : {
+                    "type" : "string",
+                    "description" : "The primary phone number of the contact"
+                  },
+                  "postCode" : {
+                    "type" : "string",
+                    "description" : "Postcode"
+                  },
+                  "socialNetworkId" : {
+                    "type" : "string",
+                    "description" : "Identifier as a member of a social network"
+                  },
+                  "stateOrProvince" : {
+                    "type" : "string",
+                    "description" : "State or province"
+                  },
+                  "street1" : {
+                    "type" : "string",
+                    "description" : "Describes the street"
+                  },
+                  "street2" : {
+                    "type" : "string",
+                    "description" : "Complementary street description"
+                  },
+                  "atSchemaLocation" : {
+                    "type" : "string",
+                    "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+                    "format" : "uri"
+                  },
+                  "atBaseType" : {
+                    "type" : "string",
+                    "description" : "When sub-classing, this defines the super-class"
+                  },
+                  "tmForumType" : {
+                    "type" : "string",
+                    "description" : "When sub-classing, this defines the sub-class entity name"
+                  }
+                },
+                "description" : "Describes the contact medium characteristics that could be used to contact a party (an individual or an organization)"
+              }
+            },
+            "validFor" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "endDateTime" : {
+                    "type" : "string",
+                    "description" : "End of the time period, using IETC-RFC-3339 format",
+                    "format" : "date-time"
+                  },
+                  "startDateTime" : {
+                    "type" : "string",
+                    "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "format" : "date-time"
+                  }
+                },
+                "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+              }
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "Indicates the contact medium that could be used to contact the party."
+        }
+      }
+    },
+    "creditRating" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "creditAgencyName" : {
+              "type" : "string",
+              "description" : "Name of the credit agency giving the score"
+            },
+            "creditAgencyType" : {
+              "type" : "string",
+              "description" : "Type of the credit agency giving the score"
+            },
+            "ratingReference" : {
+              "type" : "string",
+              "description" : "Reference corresponding to the credit rating"
+            },
+            "ratingScore" : {
+              "type" : "integer",
+              "description" : "A measure of a party’s creditworthiness calculated on the basis of a combination of factors such as their income and credit history"
+            },
+            "validFor" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "endDateTime" : {
+                    "type" : "string",
+                    "description" : "End of the time period, using IETC-RFC-3339 format",
+                    "format" : "date-time"
+                  },
+                  "startDateTime" : {
+                    "type" : "string",
+                    "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "format" : "date-time"
+                  }
+                },
+                "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+              }
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "An individual might be evaluated for its worthiness and this evaluation might be based on a credit rating given by a credit agency."
+        }
+      }
+    },
+    "externalReference" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "externalReferenceType" : {
+              "type" : "string",
+              "description" : "Type of the external reference"
+            },
+            "name" : {
+              "type" : "string",
+              "description" : "External reference name"
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "External reference of the individual or reference in other system"
+        }
+      }
+    },
+    "partyCharacteristic" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "required" : [ "name", "value" ],
+          "type" : "object",
+          "properties" : {
+            "name" : {
+              "type" : "string",
+              "description" : "Name of the characteristic"
+            },
+            "valueType" : {
+              "type" : "string",
+              "description" : "Data type of the value of the characteristic"
+            },
+            "value" : {
+              "properties" : null
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "Describes a given characteristic of an object or entity through a name/value pair."
+        }
+      }
+    },
+    "relatedParty" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/RelatedParty/schema.json"
+      }
+    },
+    "taxExemptionCertificate" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/TaxExemptionCertificate/schema.json"
+      }
+    },
+    "atSchemaLocation" : {
+      "type" : "string",
+      "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+      "format" : "uri"
+    },
+    "atBaseType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the super-class"
+    },
+    "tmForumType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the sub-class entity name"
+    }
+  },
+  "description" : "Generic Party structure used to define commonalities between sub concepts of Individual and Organization.",
+  "$schemaVersion" : "4.0.0",
+  "title" : "Party",
+  "$id" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/Party/schema.json",
+  "modelTags" : "",
+  "$schema" : "http://json-schema.org/schema#"
+}
