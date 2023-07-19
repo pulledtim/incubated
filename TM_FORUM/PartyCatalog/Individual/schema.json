@@ -1,0 +1,695 @@
+{
+  "required" : [ "id" ],
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "Unique identifier of the organization"
+    },
+    "href" : {
+      "type" : "string",
+      "description" : "Hyperlink to access the organization"
+    },
+    "aristocraticTitle" : {
+      "type" : "string",
+      "description" : "e.g. Baron, Graf, Earl,…"
+    },
+    "birthDate" : {
+      "type" : "string",
+      "description" : "Birth date",
+      "format" : "date-time"
+    },
+    "countryOfBirth" : {
+      "type" : "string",
+      "description" : "Country where the individual was born"
+    },
+    "deathDate" : {
+      "type" : "string",
+      "description" : "Date of death",
+      "format" : "date-time"
+    },
+    "familyName" : {
+      "type" : "string",
+      "description" : "Contains the non-chosen or inherited name. Also known as last name in the Western context"
+    },
+    "familyNamePrefix" : {
+      "type" : "string",
+      "description" : "Family name prefix"
+    },
+    "formattedName" : {
+      "type" : "string",
+      "description" : "A fully formatted name in one string with all of its pieces in their proper place and all of the necessary punctuation. Useful for specific contexts (Chinese, Japanese, Korean,…)"
+    },
+    "fullName" : {
+      "type" : "string",
+      "description" : "Full name flatten (first, middle, and last names)"
+    },
+    "gender" : {
+      "type" : "string",
+      "description" : "Gender"
+    },
+    "generation" : {
+      "type" : "string",
+      "description" : "e.g.. Sr, Jr, III (the third),…"
+    },
+    "givenName" : {
+      "type" : "string",
+      "description" : "First name of the individual"
+    },
+    "legalName" : {
+      "type" : "string",
+      "description" : "Legal name or birth name (name one has for official purposes)"
+    },
+    "location" : {
+      "type" : "string",
+      "description" : "Temporary current location od the individual (may be used if the individual has approved its sharing)"
+    },
+    "maritalStatus" : {
+      "type" : "string",
+      "description" : "Marital status (married, divorced, widow ...)"
+    },
+    "middleName" : {
+      "type" : "string",
+      "description" : "Middles name or initial"
+    },
+    "nationality" : {
+      "type" : "string",
+      "description" : "Nationality"
+    },
+    "placeOfBirth" : {
+      "type" : "string",
+      "description" : "Reference to the place where the individual was born"
+    },
+    "preferredGivenName" : {
+      "type" : "string",
+      "description" : "Contains the chosen name by which the individual prefers to be addressed. Note: This name may be a name other than a given name, such as a nickname"
+    },
+    "title" : {
+      "type" : "string",
+      "description" : "Useful for titles (aristocratic, social,...) Pr, Dr, Sir, ..."
+    },
+    "contactMedium" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "mediumType" : {
+              "type" : "string",
+              "description" : "Type of the contact medium, such as: email address, telephone number, postal address"
+            },
+            "preferred" : {
+              "type" : "boolean",
+              "description" : "If true, indicates that is the preferred contact medium"
+            },
+            "characteristic" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "city" : {
+                    "type" : "string",
+                    "description" : "The city"
+                  },
+                  "contactType" : {
+                    "type" : "string",
+                    "description" : "The type of contact, for example: phone number such as mobile, fixed home, fixed office. postal address such as shipping instalation…"
+                  },
+                  "country" : {
+                    "type" : "string",
+                    "description" : "The country"
+                  },
+                  "emailAddress" : {
+                    "type" : "string",
+                    "description" : "Full email address in standard format"
+                  },
+                  "faxNumber" : {
+                    "type" : "string",
+                    "description" : "The fax number of the contact"
+                  },
+                  "phoneNumber" : {
+                    "type" : "string",
+                    "description" : "The primary phone number of the contact"
+                  },
+                  "postCode" : {
+                    "type" : "string",
+                    "description" : "Postcode"
+                  },
+                  "socialNetworkId" : {
+                    "type" : "string",
+                    "description" : "Identifier as a member of a social network"
+                  },
+                  "stateOrProvince" : {
+                    "type" : "string",
+                    "description" : "State or province"
+                  },
+                  "street1" : {
+                    "type" : "string",
+                    "description" : "Describes the street"
+                  },
+                  "street2" : {
+                    "type" : "string",
+                    "description" : "Complementary street description"
+                  },
+                  "atSchemaLocation" : {
+                    "type" : "string",
+                    "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+                    "format" : "uri"
+                  },
+                  "atBaseType" : {
+                    "type" : "string",
+                    "description" : "When sub-classing, this defines the super-class"
+                  },
+                  "tmForumType" : {
+                    "type" : "string",
+                    "description" : "When sub-classing, this defines the sub-class entity name"
+                  }
+                },
+                "description" : "Describes the contact medium characteristics that could be used to contact a party (an individual or an organization)"
+              }
+            },
+            "validFor" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "endDateTime" : {
+                    "type" : "string",
+                    "description" : "End of the time period, using IETC-RFC-3339 format",
+                    "format" : "date-time"
+                  },
+                  "startDateTime" : {
+                    "type" : "string",
+                    "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "format" : "date-time"
+                  }
+                },
+                "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+              }
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "Indicates the contact medium that could be used to contact the party."
+        }
+      }
+    },
+    "creditRating" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "creditAgencyName" : {
+              "type" : "string",
+              "description" : "Name of the credit agency giving the score"
+            },
+            "creditAgencyType" : {
+              "type" : "string",
+              "description" : "Type of the credit agency giving the score"
+            },
+            "ratingReference" : {
+              "type" : "string",
+              "description" : "Reference corresponding to the credit rating"
+            },
+            "ratingScore" : {
+              "type" : "integer",
+              "description" : "A measure of a party’s creditworthiness calculated on the basis of a combination of factors such as their income and credit history"
+            },
+            "validFor" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "endDateTime" : {
+                    "type" : "string",
+                    "description" : "End of the time period, using IETC-RFC-3339 format",
+                    "format" : "date-time"
+                  },
+                  "startDateTime" : {
+                    "type" : "string",
+                    "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "format" : "date-time"
+                  }
+                },
+                "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+              }
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "An individual might be evaluated for its worthiness and this evaluation might be based on a credit rating given by a credit agency."
+        }
+      }
+    },
+    "disability" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "disabilityCode" : {
+              "type" : "string",
+              "description" : "Code of the disability"
+            },
+            "disabilityName" : {
+              "type" : "string",
+              "description" : "Name of the disability"
+            },
+            "validFor" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "endDateTime" : {
+                    "type" : "string",
+                    "description" : "End of the time period, using IETC-RFC-3339 format",
+                    "format" : "date-time"
+                  },
+                  "startDateTime" : {
+                    "type" : "string",
+                    "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "format" : "date-time"
+                  }
+                },
+                "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+              }
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "Lack or inadequate strength or ability."
+        }
+      }
+    },
+    "externalReference" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "externalReferenceType" : {
+              "type" : "string",
+              "description" : "Type of the external reference"
+            },
+            "name" : {
+              "type" : "string",
+              "description" : "External reference name"
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "External reference of the individual or reference in other system"
+        }
+      }
+    },
+    "individualIdentification" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "identificationId" : {
+              "type" : "string",
+              "description" : "Identifier"
+            },
+            "identificationType" : {
+              "type" : "string",
+              "description" : "Identification type (passport, national identity card, drivers license, social security number, birth certificate)"
+            },
+            "issuingAuthority" : {
+              "type" : "string",
+              "description" : "Authority which has issued the identifier, such as: social security, town hall"
+            },
+            "issuingDate" : {
+              "type" : "string",
+              "description" : "Date at which the identifier was issued",
+              "format" : "date-time"
+            },
+            "attachment" : {
+              "$ref" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/AttachmentRefOrValue/schema.json"
+            },
+            "validFor" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "endDateTime" : {
+                    "type" : "string",
+                    "description" : "End of the time period, using IETC-RFC-3339 format",
+                    "format" : "date-time"
+                  },
+                  "startDateTime" : {
+                    "type" : "string",
+                    "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "format" : "date-time"
+                  }
+                },
+                "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+              }
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "Represents our registration of information used as proof of identity by an individual (passport, national identity card, drivers license, social security number, birth certificate)"
+        }
+      }
+    },
+    "languageAbility" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "isFavouriteLanguage" : {
+              "type" : "boolean",
+              "description" : "A “true” value specifies whether the language is considered by the individual as his favourite one"
+            },
+            "languageCode" : {
+              "type" : "string",
+              "description" : "Language code (RFC 5646)"
+            },
+            "languageName" : {
+              "type" : "string",
+              "description" : "Language name"
+            },
+            "listeningProficiency" : {
+              "type" : "string",
+              "description" : "Listening proficiency evaluated for this language"
+            },
+            "readingProficiency" : {
+              "type" : "string",
+              "description" : "Reading proficiency evaluated for this language"
+            },
+            "speakingProficiency" : {
+              "type" : "string",
+              "description" : "Speaking proficiency evaluated for this language"
+            },
+            "writingProficiency" : {
+              "type" : "string",
+              "description" : "Writing proficiency evaluated for this language"
+            },
+            "validFor" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "endDateTime" : {
+                    "type" : "string",
+                    "description" : "End of the time period, using IETC-RFC-3339 format",
+                    "format" : "date-time"
+                  },
+                  "startDateTime" : {
+                    "type" : "string",
+                    "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "format" : "date-time"
+                  }
+                },
+                "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+              }
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "Ability of an individual to understand or converse in a language."
+        }
+      }
+    },
+    "otherName" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "aristocraticTitle" : {
+              "type" : "string",
+              "description" : "e.g. Baron, Graf, Earl,…"
+            },
+            "familyName" : {
+              "type" : "string",
+              "description" : "Contains the non-chosen or inherited name. Also known as last name in the Western context"
+            },
+            "familyNamePrefix" : {
+              "type" : "string",
+              "description" : "Family name prefix"
+            },
+            "formattedName" : {
+              "type" : "string",
+              "description" : ". A fully formatted name in one string with all of its pieces in their proper place and all of the necessary punctuation. Useful for specific contexts (Chinese, Japanese, Korean,…)"
+            },
+            "fullName" : {
+              "type" : "string",
+              "description" : "Full name flatten (first, middle, and last names)"
+            },
+            "generation" : {
+              "type" : "string",
+              "description" : "e.g. Sr, Jr…"
+            },
+            "givenName" : {
+              "type" : "string",
+              "description" : "First name"
+            },
+            "legalName" : {
+              "type" : "string",
+              "description" : "Legal name or birth name (name one has for official purposes)"
+            },
+            "middleName" : {
+              "type" : "string",
+              "description" : "Middle name or initial"
+            },
+            "preferredGivenName" : {
+              "type" : "string",
+              "description" : "Contains the chosen name by which the person prefers to be addressed. Note: This name may be a name other than a given name, such as a nickname"
+            },
+            "title" : {
+              "type" : "string",
+              "description" : "Use for titles (aristrocatic, social, ...): Pr, Dr, Sir,...."
+            },
+            "validFor" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "endDateTime" : {
+                    "type" : "string",
+                    "description" : "End of the time period, using IETC-RFC-3339 format",
+                    "format" : "date-time"
+                  },
+                  "startDateTime" : {
+                    "type" : "string",
+                    "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "format" : "date-time"
+                  }
+                },
+                "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+              }
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "Keeps track of other names, for example the old name of a woman before marriage or an artist name."
+        }
+      }
+    },
+    "partyCharacteristic" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "required" : [ "name", "value" ],
+          "type" : "object",
+          "properties" : {
+            "name" : {
+              "type" : "string",
+              "description" : "Name of the characteristic"
+            },
+            "valueType" : {
+              "type" : "string",
+              "description" : "Data type of the value of the characteristic"
+            },
+            "value" : {
+              "properties" : null
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "Describes a given characteristic of an object or entity through a name/value pair."
+        }
+      }
+    },
+    "relatedParty" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/RelatedParty/schema.json"
+      }
+    },
+    "skill" : {
+      "type" : "array",
+      "items" : {
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "comment" : {
+              "type" : "string",
+              "description" : "A free text comment linked to the evaluation done"
+            },
+            "evaluatedLevel" : {
+              "type" : "string",
+              "description" : "Level of expertise in a skill evaluated for an individual"
+            },
+            "skillCode" : {
+              "type" : "string",
+              "description" : "Code of the skill"
+            },
+            "skillName" : {
+              "type" : "string",
+              "description" : "Name of the skill such as Java language,…"
+            },
+            "validFor" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "endDateTime" : {
+                    "type" : "string",
+                    "description" : "End of the time period, using IETC-RFC-3339 format",
+                    "format" : "date-time"
+                  },
+                  "startDateTime" : {
+                    "type" : "string",
+                    "description" : "Start of the time period, using IETC-RFC-3339 format. If you define a start, you must also define an end",
+                    "format" : "date-time"
+                  }
+                },
+                "description" : "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both"
+              }
+            },
+            "atSchemaLocation" : {
+              "type" : "string",
+              "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+              "format" : "uri"
+            },
+            "atBaseType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the super-class"
+            },
+            "tmForumType" : {
+              "type" : "string",
+              "description" : "When sub-classing, this defines the sub-class entity name"
+            }
+          },
+          "description" : "Skills evaluated for an individual with a level and possibly with a limited validity when an obsolescence is defined (Ex: the first-aid certificate first level is limited to one year and an update training is required each year to keep the level)."
+        }
+      }
+    },
+    "status" : {
+      "type" : "string",
+      "description" : "Valid values for the lifecycle state of the individual",
+      "enum" : [ "initialized", "validated", "deceaded" ]
+    },
+    "taxExemptionCertificate" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/TaxExemptionCertificate/schema.json"
+      }
+    },
+    "atSchemaLocation" : {
+      "type" : "string",
+      "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+      "format" : "uri"
+    },
+    "atBaseType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the super-class"
+    },
+    "tmForumType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the sub-class entity name"
+    }
+  },
+  "description" : "Individual represents a single human being (a man, woman or child). The individual can be a customer, an employee or any other person that the organization needs to store information about.",
+  "$schemaVersion" : "4.0.0",
+  "title" : "Individual",
+  "$id" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/Individual/schema.json",
+  "modelTags" : "",
+  "$schema" : "http://json-schema.org/schema#"
+}

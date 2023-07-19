@@ -1,0 +1,40 @@
+{
+  "required" : [ "id" ],
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "Unique identifier of a related entity."
+    },
+    "href" : {
+      "type" : "string",
+      "description" : "Reference of the related entity."
+    },
+    "name" : {
+      "type" : "string",
+      "description" : "Name of the related entity."
+    },
+    "atReferredType" : {
+      "type" : "string",
+      "description" : "The actual type of the target instance when needed for disambiguation."
+    },
+    "atSchemaLocation" : {
+      "type" : "string",
+      "description" : "A URI to a JSON-Schema file that defines additional attributes and relationships",
+      "format" : "uri"
+    },
+    "atBaseType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the super-class"
+    },
+    "tmForumType" : {
+      "type" : "string",
+      "description" : "When sub-classing, this defines the sub-class entity name"
+    }
+  },
+  "$schemaVersion" : "4.0.0",
+  "title" : "OrganizationRef",
+  "$id" : "https://smart-data-models.github.io/data-models.tmforum/PartyCatalog/OrganizationRef/schema.json",
+  "modelTags" : "",
+  "$schema" : "http://json-schema.org/schema#"
+}
